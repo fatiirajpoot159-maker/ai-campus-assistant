@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## 🌟 Features Built
 ## React Compiler
 1. **Professional Landing Page**: Hero section, value propositions, metrics counter, and 6 feature launchpads.
@@ -83,3 +84,6 @@ npm run dev
 ```
 
 The app will route `/api/gemini` to the local proxy during development and use the serverless proxy in production.
+=======
+# ai-campus-assistant
+>>>>>>> ba65327888bb25851de503cbff5742fbedacaa3a
