@@ -2,7 +2,7 @@
 
 Your Personal AI Academic Companion — an all-in-one student productivity platform that combines AI tutoring, note generation, study planning, and academic organization into a single app.
 
-🔗 Live App:https://ai-campus-assistant-zcg9gw4fd-haya-fatimas-projects.vercel.app 📂 GitHub Repo: github.com/fatiirajpoot159-maker/ai-campus-assistant
+🔗 Live App:https://ai-campus-assistant-221ud6yw4-haya-fatimas-projects.vercel.app 📂 GitHub Repo: github.com/fatiirajpoot159-maker/ai-campus-assistant
 
 📌 The Problem
 
