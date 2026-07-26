@@ -16,7 +16,7 @@ import {
   Star,
   GraduationCap
 } from "lucide-react";
-export function Landing() {
+export default function Landing()  {
   const featureCards = [
     {
       icon: Bot,
@@ -184,7 +184,7 @@ export function Landing() {
           ))}
         </div>
       </section>
-      {/* Footer */}
+           {/* Footer */}
       <footer className="glass-card border-t border-slate-200 dark:border-slate-800 py-8 px-6 text-center text-xs text-slate-500 dark:text-slate-400">
         <p>© 2026 AI Campus Assistant. Designed for University Excellence.</p>
       </footer>
