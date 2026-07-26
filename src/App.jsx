@@ -1,28 +1,28 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import { Navbar } from "./components/Navbar";
 import { Sidebar } from "./components/Sidebar";
 import { ToastContainer } from "./components/Toast";
 
-import { Landing } from "./pages/Landing";
-import { Login } from "./pages/Login";
-import { Signup } from "./pages/Signup";
-import { Dashboard } from "./pages/Dashboard";
-import { Chat } from "./pages/Chat";
-import { Notes } from "./pages/Notes";
-import { Planner } from "./pages/Planner";
-import { Assignments } from "./pages/Assignments";
-import { Attendance } from "./pages/Attendance";
-import { Profile } from "./pages/Profile";
-import { StudyHistory } from "./pages/History";
-import { Settings } from "./pages/Settings";
-import { Quiz } from "./pages/Quiz";
-import { Flashcards } from "./pages/Flashcards";
-import { CodingAssistant } from "./pages/CodingAssistant";
-import { EmailWriter } from "./pages/EmailWriter";
-import { CareerHub } from "./pages/CareerHub";
-import NotFound from "./pages/NotFound";
+const Landing = lazy(() => import("./pages/Landing"));
+const Login = lazy(() => import("./pages/Login"));
+const Signup = lazy(() => import("./pages/Signup"));
+const Dashboard = lazy(() => import("./pages/Dashboard"));
+const Chat = lazy(() => import("./pages/Chat"));
+const Notes = lazy(() => import("./pages/Notes"));
+const Planner = lazy(() => import("./pages/Planner"));
+const Assignments = lazy(() => import("./pages/Assignments"));
+const Attendance = lazy(() => import("./pages/Attendance"));
+const Profile = lazy(() => import("./pages/Profile"));
+const StudyHistory = lazy(() => import("./pages/History"));
+const Settings = lazy(() => import("./pages/Settings"));
+const Quiz = lazy(() => import("./pages/Quiz"));
+const Flashcards = lazy(() => import("./pages/Flashcards"));
+const CodingAssistant = lazy(() => import("./pages/CodingAssistant"));
+const EmailWriter = lazy(() => import("./pages/EmailWriter"));
+const CareerHub = lazy(() => import("./pages/CareerHub"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 function DashboardLayout() {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
@@ -48,30 +48,32 @@ function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+        <Suspense fallback={<div className="p-6 text-slate-600">Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
 
-          <Route element={<DashboardLayout />}>
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/chat" element={<Chat />} />
-            <Route path="/notes" element={<Notes />} />
-            <Route path="/planner" element={<Planner />} />
-            <Route path="/assignments" element={<Assignments />} />
-            <Route path="/attendance" element={<Attendance />} />
-            <Route path="/quiz" element={<Quiz />} />
-            <Route path="/flashcards" element={<Flashcards />} />
-            <Route path="/coding-assistant" element={<CodingAssistant />} />
-            <Route path="/email-writer" element={<EmailWriter />} />
-            <Route path="/career-hub" element={<CareerHub />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/history" element={<StudyHistory />} />
-            <Route path="/settings" element={<Settings />} />
-          </Route>
+            <Route element={<DashboardLayout />}>
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/chat" element={<Chat />} />
+              <Route path="/notes" element={<Notes />} />
+              <Route path="/planner" element={<Planner />} />
+              <Route path="/assignments" element={<Assignments />} />
+              <Route path="/attendance" element={<Attendance />} />
+              <Route path="/quiz" element={<Quiz />} />
+              <Route path="/flashcards" element={<Flashcards />} />
+              <Route path="/coding-assistant" element={<CodingAssistant />} />
+              <Route path="/email-writer" element={<EmailWriter />} />
+              <Route path="/career-hub" element={<CareerHub />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/history" element={<StudyHistory />} />
+              <Route path="/settings" element={<Settings />} />
+            </Route>
 
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </AuthProvider>
   );
