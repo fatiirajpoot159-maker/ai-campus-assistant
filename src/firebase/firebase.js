@@ -2,7 +2,7 @@ import { initializeApp, getApps } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_KEY || "AIzaSyDemoKeyOnlyForDevelopmentMode",
+  apiKey: import.meta.env.VITE_FIREBASE_KEY || import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyDemoKeyOnlyForDevelopmentMode",
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "ai-campus-assistant.firebaseapp.com",
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "ai-campus-assistant",
   storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "ai-campus-assistant.appspot.com",

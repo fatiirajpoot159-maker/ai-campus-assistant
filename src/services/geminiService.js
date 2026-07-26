@@ -12,7 +12,7 @@ Never provide incorrect academic information. Format your responses with clean M
 
 export async function callGeminiApi(prompt, systemInstruction = GEMINI_SYSTEM_PROMPT) {
   const proxyUrl = import.meta.env.VITE_GEMINI_PROXY;
-  const envKey = import.meta.env.VITE_GEMINI_KEY;
+  const envKey = import.meta.env.VITE_GEMINI_KEY || import.meta.env.VITE_GEMINI_API_KEY;
   const storedKey = typeof window !== "undefined" ? localStorage.getItem("campus_gemini_key") : null;
   const API_KEY = storedKey || envKey;
   const defaultProxy = typeof window !== "undefined" ? "/api/gemini" : null;
@@ -74,7 +74,7 @@ export async function callGeminiApi(prompt, systemInstruction = GEMINI_SYSTEM_PR
 
 export function isGeminiAvailable() {
   if (typeof window === "undefined") return false;
-  const envKey = import.meta.env.VITE_GEMINI_KEY;
+  const envKey = import.meta.env.VITE_GEMINI_KEY || import.meta.env.VITE_GEMINI_API_KEY;
   const storedKey = localStorage.getItem("campus_gemini_key");
   return !!(storedKey || (envKey && envKey !== "VITE_GEMINI_KEY"));
 }
