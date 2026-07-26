@@ -13,7 +13,7 @@ import {
   BookOpen,
   CheckCircle2
 } from "lucide-react";
-export function Notes() {
+export default function Notes() {
   const { currentUser, addNote } = useAuth();
   
   const [topic, setTopic] = useState("Linear Regression & Gradient Descent");

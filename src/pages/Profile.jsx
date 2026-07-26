@@ -15,7 +15,7 @@ import {
   Edit2,
   Save
 } from "lucide-react";
-export function Profile() {
+export default function Profile() {
   const { currentUser, updateProfile, studySessions } = useAuth();
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({

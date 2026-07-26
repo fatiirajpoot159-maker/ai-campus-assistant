@@ -21,8 +21,9 @@ const NAV_SECTIONS = [
       { path: "/planner",     icon: Calendar,    label: "Study Planner"    },
       { path: "/assignments", icon: CheckSquare, label: "Assignments",     countKey: "assignments" },
       { path: "/attendance",  icon: PieChart,    label: "Attendance"       },
+      {path: "/gpa-calculator",label: "GPA Calculator"   , icon: Calculator},              
       { path: "/notes",       icon: FileText,    label: "My Notes"         },
-      { path: "/upload-notes",icon: Upload,      label: "Upload Notes",    badge: "NEW" },
+      { path: "/notes",icon: Upload,      label: "Upload Notes",    badge: "NEW" },
     ]
   },
     {

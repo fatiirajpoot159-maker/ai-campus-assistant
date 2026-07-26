@@ -15,7 +15,7 @@ import {
   Zap,
   Target
 } from "lucide-react";
-export function Planner() {
+export default function Planner() {
   const { addPlanner } = useAuth();
   
   const [exams, setExams] = useState(["Artificial Intelligence", "Database Systems", "Computer Networks"]);

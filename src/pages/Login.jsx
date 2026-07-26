@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { GraduationCap, ArrowRight, Mail, Lock, Sparkles } from "lucide-react";
-export function Login() {
+export default function Login() {
   const { loginUser } = useAuth();
   const navigate = useNavigate();
   const [email, setEmail] = useState("haya.fatima@campus.edu");

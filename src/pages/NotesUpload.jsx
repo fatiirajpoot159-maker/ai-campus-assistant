@@ -19,7 +19,7 @@ import {
   Layers,
   ArrowRight
 } from "lucide-react";
-export function NotesUpload() {
+export default function NotesUpload() {
   const { attendance, uploadedNotes, addUploadedNote, deleteUploadedNote, setActiveNoteContext } = useAuth();
   const navigate = useNavigate();
   const [selectedFile, setSelectedFile] = useState(null);

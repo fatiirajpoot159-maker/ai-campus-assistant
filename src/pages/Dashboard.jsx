@@ -18,7 +18,7 @@ import {
   File,
   Plus
 } from "lucide-react";
-export function Dashboard() {
+export default function Dashboard() {
   const { currentUser, assignments, attendance, uploadedNotes, studySessions, activeStudySession, startStudySession, stopStudySession, setActiveNoteContext } = useAuth();
   const navigate = useNavigate();
   // Fully dynamic metrics calculated from live user data

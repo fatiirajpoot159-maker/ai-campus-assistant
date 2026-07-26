@@ -14,6 +14,7 @@ const Notes = lazy(() => import("./pages/Notes"));
 const Planner = lazy(() => import("./pages/Planner"));
 const Assignments = lazy(() => import("./pages/Assignments"));
 const Attendance = lazy(() => import("./pages/Attendance"));
+const GPACalculator = lazy(() => import("./pages/GPACalculator"));
 const Profile = lazy(() => import("./pages/Profile"));
 const StudyHistory = lazy(() => import("./pages/History"));
 const Settings = lazy(() => import("./pages/Settings"));
@@ -61,10 +62,12 @@ function App() {
               <Route path="/planner" element={<Planner />} />
               <Route path="/assignments" element={<Assignments />} />
               <Route path="/attendance" element={<Attendance />} />
+              <Route path="/notes" element={<Notes />} />
               <Route path="/quiz" element={<Quiz />} />
               <Route path="/flashcards" element={<Flashcards />} />
               <Route path="/coding-assistant" element={<CodingAssistant />} />
               <Route path="/email-writer" element={<EmailWriter />} />
+              <Route path="/gpa-calculator" element={<GPACalculator />} />
               <Route path="/career-hub" element={<CareerHub />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/history" element={<StudyHistory />} />

@@ -11,7 +11,7 @@ import {
   Sparkles,
   ChevronRight
 } from "lucide-react";
-export function StudyHistory() {
+export default function StudyHistory() {
   const { savedNotes, savedPlanners, chatHistory, studySessions, clearStudySessions } = useAuth();
   const [activeTab, setActiveTab] = useState("notes");
   const [selectedItem, setSelectedItem] = useState(null);

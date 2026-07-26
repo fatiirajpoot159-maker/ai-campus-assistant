@@ -20,7 +20,7 @@ import {
   FileText,
   X
 } from "lucide-react";
-export function Chat() {
+export default function Chat() {
   const { chatHistory, addChatMessage, clearChatHistory, uploadedNotes, activeNoteContext, setActiveNoteContext } = useAuth();
   const location = useLocation();
   

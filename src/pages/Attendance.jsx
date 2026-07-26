@@ -12,7 +12,7 @@ import {
   TrendingUp,
   X
 } from "lucide-react";
-export function Attendance() {
+export default function Attendance() {
   const { attendance, addAttendanceCourse, updateAttendanceCounts, deleteAttendanceCourse } = useAuth();
   const [showAddModal, setShowAddModal] = useState(false);
   const [newCourseName, setNewCourseName] = useState("");

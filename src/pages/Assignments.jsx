@@ -12,7 +12,7 @@ import {
   AlertCircle,
   Filter
 } from "lucide-react";
-export function Assignments() {
+export default function Assignments() {
   const { assignments, addAssignment, updateAssignmentStatus, deleteAssignment } = useAuth();
   const [showAddModal, setShowAddModal] = useState(false);
   const [filterStatus, setFilterStatus] = useState("All");
